@@ -1,0 +1,34 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# front
+cam-test1-front/node_modules
+cam-test1-front/logs
+cam-test1-front/*.log
+cam-test1-front/npm-debug.log*
+cam-test1-front/yarn-debug.log*
+cam-test1-front/yarn-error.log*
+cam-test1-front/pnpm-debug.log*
+cam-test1-front/lerna-debug.log*

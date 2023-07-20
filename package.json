@@ -1,0 +1,15 @@
+{
+  "name": "test-cam1",
+  "version": "1.0.0",
+  "main": "src/App.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/cors": "^2.8.13",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-rtsp-stream": "^0.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
