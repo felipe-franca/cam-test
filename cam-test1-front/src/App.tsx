@@ -1,4 +1,4 @@
-import { useEffect, useState} from 'react'
+import { useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import JSMpeg from '@cycjimmy/jsmpeg-player'
@@ -9,16 +9,25 @@ function App() {
   const [currentStream, setSetCurrentStream] = useState<string>('');
   const [player, setPlayer] = useState(null);
 
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+
   function stream () {
     if (player) player.destroy();
     if (document.querySelector('#video-element > canvas')) return;
 
+    const wsPort = getRandomInt(60000, 65000);
+
     const options = {
-      url: `http://localhost:3001/stream/${currentStream}`
+      url: `http://192.168.200.61:3001/stream/${currentStream}?ws_port=${wsPort}`
     }
 
     axios(options).then((res) => {
-      const videiourl = `ws://localhost:9999`;
+      const videiourl = `ws://192.168.200.61:${wsPort}`;
 
       console.log(videiourl)
 
